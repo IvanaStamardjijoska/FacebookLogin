@@ -7,14 +7,31 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
+import FBSDKCoreKit
+import FBSDKLoginKit
+
+
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+     override func viewDidLoad() {
+         super.viewDidLoad()
+         let loginButton = FBSDKLoginButton()
+        
+        loginButton.center = view.center
+        view.addSubview(loginButton)
+        if (FBSDKAccessToken.current() != nil) {
+            // User is logged in,
+
+        }        // Do any additional setup after loading the view, typically from a nib.
     }
+    
 
-
-}
+       
+        }
+        
+  
 
